@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #131627;
+  color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+
+  .flexBetween {
+    @apply flex justify-between items-center;
+  }
+
+  .flexAround {
+    @apply flex justify-around items-center;
+  }
+
+  .imgObject {
+    @apply object-cover object-center;
+  }
+
+  .imgSeleted {
+    @apply pointer-events-none select-none;
   }
 }
+
+.h1-gradient {
+  color: #e879d9;
+  background-image: -webkit-linear-gradient(0deg, #e879d9 36%, #753fe0 73%, #4aaced 87%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(109, 108, 108, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.circle {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(to bottom, #e879d9 60%, #4aaced 40%);
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
