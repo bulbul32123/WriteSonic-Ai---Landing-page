@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Hero() {
@@ -20,16 +21,16 @@ export default function Hero() {
                 </div>
             </div>
             <div className="absolute top-2 sm:top-[35%] left-5 flexCenter max-sm:gap-1 sm:flex-col">
-                <img src="/user1.jpg" className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' />
+                <Image className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' width={100} height={100} alt='User 1' src="/user1.jpg" />
                 <span className='py-2 text-xs font-light px-4 glass-effect rounded-full select-none'>Marketer</span>
             </div>
 
             <div className="absolute top-[80%] md:top-[70%] left-[10%] md:left-[20%] flexCenter flex-col">
-                <img src="/user2.jpg" className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' />
+                <Image className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' alt='User 1' width={100} height={100} src="/user2.jpg" />
                 <span className='py-2 text-xs font-light px-4 glass-effect rounded-full select-none'>Blogger</span>
             </div>
             <div className="absolute top-[59%] md:top-[50%] right-9 flexCenter flex-col">
-                <img src="/user3.jpg" className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' />
+                <Image className='sm:h-24  h-16 w-16 sm:w-24 imgObject imgSeleted rounded-full mb-2' alt='User 1' width={100} height={100} src="/user3.jpg" />
                 <span className='py-2 text-xs font-light px-4 glass-effect rounded-full select-none'>Writter</span>
             </div>
             <div class="absolute -top-20 left-0 circle rounded-full"></div>
